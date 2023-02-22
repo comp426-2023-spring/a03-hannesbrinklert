@@ -40,8 +40,8 @@ if (arr.length != 0) {
     if (["rock", "paper", "scissors"].includes(choice)) {
         console.log(rps(choice));
     } else {
-        console.log(help);
         console.log(rules);
+        console.log(help);
         process.exit(0);
     }
 } else {
