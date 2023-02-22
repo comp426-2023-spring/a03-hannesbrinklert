@@ -29,7 +29,7 @@ if (args.h || args.help) {
 }
 
 if (args.r || args.rules) {
-    console.log();
+    console.log(rules);
     process.exit(1);
 }
 
@@ -40,6 +40,7 @@ if (arr.length != 0) {
     if (["rock", "paper", "scissors"].includes(choice)) {
         console.log(rps(choice));
     } else {
+        console.log(help);
         console.log(rules);
         process.exit(0);
     }
