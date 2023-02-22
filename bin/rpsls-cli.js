@@ -47,8 +47,7 @@ if (arr.length != 0) {
     if (["rock", "paper", "scissors", "lizard", "spock"].includes(choice)) {
         console.log(rpsls(choice));
     } else {
-        console.log(rules + "\n");
-        console.log(help);
+        console.log(rules + help);
         process.exit(0);
     }
 } else {
