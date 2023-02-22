@@ -17,17 +17,19 @@ Examples:
   node-rps rock   Return JSON with results for RPS played against a simulated opponent.
                   e.g {"player":"rock","opponent":"scissors","result":"win"}`;
 
+const rules = `Rules for Rock Paper Scissors:
+
+- Scissors CUTS Paper
+- Paper COVERS Rock
+- Rock CRUSHES Scissors`;
+
 if (args.h || args.help) {
     console.log(help);
     process.exit(1);
 }
 
 if (args.r || args.rules) {
-    console.log(`Rules for Rock Paper Scissors:
-
-    - Scissors CUTS Paper
-    - Paper COVERS Rock
-    - Rock CRUSHES Scissors`);
+    console.log();
     process.exit(1);
 }
 
@@ -38,7 +40,7 @@ if (arr.length != 0) {
     if (["rock", "paper", "scissors"].includes(choice)) {
         console.log(rps(choice));
     } else {
-        console.log(help);
+        console.log(rules);
         process.exit(0);
     }
 } else {

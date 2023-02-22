@@ -17,24 +17,26 @@ Examples:
     node-rpsls rock   Return JSON with results for RPSLS played against a simulated opponent.
                       e.g {"player":"rock","opponent":"Spock","result":"lose"}`;
 
+const rules = `Rules for the Lizard-Spock Espansion of Rock Paper Scissors:
+
+- Scissors CUTS Paper
+- Paper COVERS Rock
+- Rock SMOOSHES Lizard
+- Lizard POISONS Spock
+- Spock SMASHES Scissors
+- Scissors DECAPITATES Lizard
+- Lizard EATS Paper
+- Paper DISPROVES Spock
+- Spock VAPORIZES Rock
+- Rock CRUSHES Scissors`;
+
 if (args.h || args.help) {
     console.log(help);
     process.exit(1);
 }
 
 if (args.r || args.rules) {
-    console.log(`Rules for the Lizard-Spock Espansion of Rock Paper Scissors:
-
-    - Scissors CUTS Paper
-    - Paper COVERS Rock
-    - Rock SMOOSHES Lizard
-    - Lizard POISONS Spock
-    - Spock SMASHES Scissors
-    - Scissors DECAPITATES Lizard
-    - Lizard EATS Paper
-    - Paper DISPROVES Spock
-    - Spock VAPORIZES Rock
-    - Rock CRUSHES Scissors`);
+    console.log(rules);
     process.exit(1);
 }
 
@@ -45,7 +47,7 @@ if (arr.length != 0) {
     if (["rock", "paper", "scissors", "lizard", "spock"].includes(choice)) {
         console.log(rpsls(choice));
     } else {
-        console.log(help);
+        console.log(rules);
         process.exit(0);
     }
 } else {
